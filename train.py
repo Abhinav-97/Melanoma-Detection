@@ -7,14 +7,9 @@ import tensorflow as tf
 import tensorflow.keras.backend as K
 import efficientnet.tfkeras as efn
 
-import PIL
-
 from kaggle_datasets import KaggleDatasets
 
-from tqdm import tqdm
-
 import argparse
-import warnings
 
 parser = argparse.ArgumentParser()
 
