@@ -41,9 +41,21 @@ Data Augmentation techniques random rotation and shear augmentation. Augmentatio
 ## Training Details
 
 We use EfficientNets as baseline architecture for our models. All models were trained on Kaggle’s TPUs machine TPU v3-8. We preferred TPU’s over GPU’s as they incorporate bigger batch size which helps gradients converge better. Since we are dealing with an highly imbalanced dataset, small batch sizes may have no positive samples leading to less informative gradients.
-We train 2 types of models in our approach. In our first approach we train the models with K-Fold cross validation strategy. We used various combinations of EfficientNet B0 to B5 as baseline architectures for out models. Also, these models were trained on varying sizes. Because of different sizes CNN’s are able to capture different features, hence taking an ensemble of them helps to capture predictions with varying features leading to better results. Also, most of models trained with this approach were trained using external data. The modes were trained with Adam optimizer and used imagenet as pretrained weights [6]. All the models used in this approach used binary cross entropy as loss function with label smoothing factor as 0.05.
+We used various combinations of EfficientNet B0 to B5 as baseline architectures for out models. Also, these models were trained on varying sizes. Because of different sizes CNN’s are able to capture different features, hence taking an ensemble of them helps to capture predictions with varying features leading to better results. Also, most of models trained with this approach were trained using external data. The modes were trained with Adam optimizer and used imagenet as pretrained weights [6]. All the models used in this approach used binary cross entropy as loss function with label smoothing factor as 0.05.
 
 For setup run 
+
 `pip install requirements.txt`
 
+For training models parallely on full data run
 
+`python train.py --num_networks 6 --image_size 384 --batch_size 8 --epochs 15`
+
+For training single using K fold validation run with external data 
+
+`python train_fold.py --num_networks 3 --folds 5 --image_size 384 --batch_size 8 --epochs 15 --use_external_data 1`
+
+
+## Ensemble
+
+Finally ensemble of all models trained with different image sizes were taken using weighted average with weights tuned manually.the dtails of Model scores and ensemble are given in table below
