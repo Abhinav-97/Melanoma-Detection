@@ -17,3 +17,9 @@ Solution for Kaggle's SIIM-ISIC Melanoma Classification that got Rank 57 out of 
 * target - binarized version of the target variable
 
 Our task is to predict target variable. 0 as target denotes benign and 1 denotes malignant. In addition, we make the use of external dataset. The external dataset consists of malignant data from ISIC 2019 challenge and ISIS 2018 challenge . We also make use of malignant data provided in ISIC website. We deal with a huge imbalance in the training dataset with only 584 samples labelled as 1(malignant) while 32542 samples are labelled as 0. 
+
+## Pre Processing
+CNN’s searches for many patterns and features in images. By training models with varying images, we supply CNN’s with multiple features and patterns of different sizes We take ensemble of models trained on different image sizes.
+
+## Data Augmentation
+Data Augmentation techniques random rotation and shear augmentation. Augmentation was also provided by random zoom and horizontal and vertical shifting the images. In addition, we also used   random brightness, contrast and saturation. At last random images were centre cropped to provide more augmentation.
