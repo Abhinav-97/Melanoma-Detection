@@ -22,4 +22,18 @@ Our task is to predict target variable. 0 as target denotes benign and 1 denotes
 CNN’s searches for many patterns and features in images. By training models with varying images, we supply CNN’s with multiple features and patterns of different sizes We take ensemble of models trained on different image sizes.
 
 ## Data Augmentation
-Data Augmentation techniques random rotation and shear augmentation. Augmentation was also provided by random zoom and horizontal and vertical shifting the images. In addition, we also used   random brightness, contrast and saturation. At last random images were centre cropped to provide more augmentation.
+Data Augmentation techniques random rotation and shear augmentation. Augmentation was also provided by random zoom and horizontal and vertical shifting the images. In addition, we also used   random brightness, contrast and saturation. At last random images were centre cropped to provide more augmentation.Some of the Augmented Images are shown below.
+
+<p float="left" align="middle">
+  <img src="images/Melanoma1.png" width="60%" />
+</p>
+<p float="left" align="middle">
+  <font size+=1><em>Augmentation applied on various images</em></font>
+</p>
+
+<p float="left" align="middle">
+  <img src="images/Melanoma2.png" width="60%" />
+</p>
+<p float="left" align="middle">
+  <font size+=1><em>Illustration of various augmentation applied for training, on a single image.</em></font>
+</p>
