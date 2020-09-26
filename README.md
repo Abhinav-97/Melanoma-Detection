@@ -59,3 +59,12 @@ For training single using K fold validation run with external data
 ## Ensemble
 
 Finally ensemble of all models trained with different image sizes were taken using weighted average with weights tuned manually.the dtails of Model scores and ensemble are given in table below
+
+<p float="left" align="middle">
+  <img src="images/Melanoma-Table.png" width="60%" />
+</p>
+<p float="left" align="middle">
+  <font size=1><em>ROC scores of our various models. Some models were trained with imagenet (IMN) and some with noisy student (NS) as pretrained weights. Some also made use of external data (EX) Best ensemble in our case refers to ensemble with weights set using Out of fold scores.</em></font>
+</p>
+
+The best ensemble gave a ROC-AUC score of <b>0.9428</b>
