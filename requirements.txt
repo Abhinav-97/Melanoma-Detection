@@ -1,0 +1,11 @@
+numpy
+pandas
+opencv-python
+tensorflow
+scikit-learn
+seaborn
+matplotlib
+albumentations==0.4.6
+efficientnet
+kaggle_datasets 
+Pillow
